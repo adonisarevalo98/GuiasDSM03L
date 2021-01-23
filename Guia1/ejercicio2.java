@@ -24,16 +24,18 @@ if (numeros[f] > 0) {
 contador1++;
 }else if(numeros[f] < 0){
     contador2++;
-}else if(numeros[f] % valid1 == 0 ){
+}
+ if(numeros[f] % valid1 == 0 ){
     contador3++;
-}else if (numeros[f] % valid2 == 0){
+}
+ if (numeros[f] % valid2 == 0){
     sumpares += numeros[f];
 }
 }
-System.out.println("Numeros positivos:" + contador1);
-System.out.println("Numeros negativos:" + contador2);
-System.out.println("Numeros multiplos de 15:" + contador3);
-System.out.println("Suma de pares" + sumpares);
+System.out.println("Numeros positivos: " + contador1);
+System.out.println("Numeros negativos: " + contador2);
+System.out.println("Numeros multiplos de 15: " + contador3);
+System.out.println("Suma de pares: " + sumpares);
 }
 public static void main(String[] ar) {
 Identificarnumeros cad = new Identificarnumeros();
