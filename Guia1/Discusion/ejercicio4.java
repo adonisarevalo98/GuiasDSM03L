@@ -21,7 +21,7 @@ y[f] = teclado.nextInt();
 public void recorrercoordenadas() {
 for (int f = 0; f < x.length; f++) {
 if (x[f] > 0 && y[f] > 0) {
-contador++;
+contador1++;
 }
 if(x[f] < 0 && y[f] > 0){
     contador2++;
