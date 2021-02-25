@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE2C0"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Ingrese los datos de empleados" />
+
+            <EditText
+                android:id="@+id/etnombre1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#FFEB3B"
+                android:hint="Nombre completo de empleado 1" />
+
+            <EditText
+                android:id="@+id/ethoras1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:hint="Horas trabajadas"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etcargo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:hint="Cargo" />
+
+
+            <EditText
+                android:id="@+id/etnombre2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#FFEB3B"
+                android:hint="Nombre completo de empleado 2" />
+
+            <EditText
+                android:id="@+id/ethoras2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:hint="Horas trabajadas"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etcargo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:hint="Cargo" />
+
+
+            <EditText
+                android:id="@+id/etnombre3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#FFEB3B"
+                android:hint="Nombre completo de empleado 3" />
+
+            <EditText
+                android:id="@+id/ethoras3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:hint="Horas Trabajadas"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etcargo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:hint="Cargo" />
+
+            <Button
+
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="segundaactivity"
+                android:text="Calcular" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
