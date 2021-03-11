@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/texto_conectar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Conectar"
+        />
+
+    <EditText
+        android:id="@+id/input_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/texto_conectar"
+        android:ems="10"
+        android:hint="Correo"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/input_contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/input_usuario"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword" />
+
+
+    <Button
+        android:id="@+id/boton_iniciar_sesion"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/input_contrasena"
+        android:ems="10"
+        android:text="Iniciar Sesion" />
+    <TextView
+        android:id="@+id/texto_olvidaste_contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/boton_iniciar_sesion"
+        android:ems="10"
+        android:text="¿Olvidaste tu constraseña?"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#0E8AEE" />
+</RelativeLayout>
