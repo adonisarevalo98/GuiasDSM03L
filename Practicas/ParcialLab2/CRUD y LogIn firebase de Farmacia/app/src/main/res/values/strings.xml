@@ -1,0 +1,17 @@
+<resources>
+    <string name="usuario">Usuario</string>
+    <string name="correo">Correo</string>
+    <string name="listacarrito">Lista de productos en carrito</string>
+
+    <string name="logout">Cerrar Sesión</string>
+    <string name="deleteaccount">Eliminar cuenta</string>
+    <string name="verfarmacia">Ver farmacia</string>
+    <string name="agregaralcarro">Agregar al carrito</string>
+    <string name="regresar">Regresar</string>
+    <string name="farmaco">Farmaco</string>
+
+
+    <string name="app_name">firebase_login</string>
+    <string name="facebook_app_id">258610125811296</string>
+    <string name="fb_login_protocol_scheme">fb258610125811296</string>
+</resources>
