@@ -17,7 +17,7 @@ Instalacion: para utilizar el proyecto será necesario clonarlo en una carpeta y
              - Version de SDK minima: 16, Android 4.1 (Jelly Bean).
              - Lenguaje de programacion utilizado: Java 8
              
-Uso: las opciones e instruciones de uso se encuentran el archivo "capturas de resultado.pdf"
+Uso: las opciones e instruciones de uso se encuentran en el archivo "capturas de resultado.pdf"
 
 
              
