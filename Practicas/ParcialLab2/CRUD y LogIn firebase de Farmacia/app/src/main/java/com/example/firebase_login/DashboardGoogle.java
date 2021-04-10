@@ -19,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.bumptech.glide.Glide;
+import com.example.firebase_login.datos.Carrito;
+import com.example.firebase_login.datos.Compra;
 import com.example.firebase_login.datos.Farmaco;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -48,12 +50,14 @@ public class DashboardGoogle extends AppCompatActivity {
     Query consultaordenada = refFarmacos.orderByChild("idcliente").equalTo(String.valueOf(FirebaseAuth.getInstance().getCurrentUser().getUid()));
     List<Farmaco> farmacos;
     ListView listafarmacos;
+    Compra compra=new Compra();
+    public static DatabaseReference refCompras = database.getReference("compras");
     //Variable para gestionar FirebaseAuth
     private FirebaseAuth mAuth;
 
     private TextView txtid, txtnombres, txtemail;
     private ImageView imagenUser;
-    private Button btnLogOut, btnEliminarCuenta,verfarmacia;
+    private Button btnLogOut, btnEliminarCuenta,verfarmacia,compras,vercompras;
 
     //Variables opcionales para desloguear de google tambien
     private GoogleSignInClient mGoogleSignInClient;
@@ -70,7 +74,8 @@ public class DashboardGoogle extends AppCompatActivity {
 
         btnLogOut = findViewById(R.id.btnLogout);
         btnEliminarCuenta = findViewById(R.id.btnEliminarCuenta);
-
+        compras = findViewById(R.id.button4);
+        vercompras = findViewById(R.id.button5);
         // Inicializar Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -156,6 +161,26 @@ public class DashboardGoogle extends AppCompatActivity {
             }
         });
 
+        compras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                DashboardGoogle.refCompras.push().setValue(compra);
+                DashboardGoogle.refFarmacos.removeValue();
+                Toast.makeText(DashboardGoogle.this,
+                        "Compra realizada!",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        vercompras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardGoogle.this, ComprasActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }//fin onCreate
     private void inicializar(){
         listafarmacos = findViewById(R.id.Listarfarmacos);
@@ -200,6 +225,9 @@ public class DashboardGoogle extends AppCompatActivity {
                 for (DataSnapshot dato : dataSnapshot.getChildren()) {
                     Farmaco farmaco = dato.getValue(Farmaco.class);
                     farmaco.setKey(dato.getKey());
+
+                     compra = dato.getValue(Compra.class);
+                    compra.setKey(dato.getKey());
                     farmacos.add(farmaco);
                 }
 
@@ -213,6 +241,8 @@ public class DashboardGoogle extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void signOut() {
         //sign out de firebase

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.firebase_login.datos.Carrito;
 import com.example.firebase_login.datos.Farmaco;
@@ -51,7 +52,8 @@ public class AddFarmacoActivity extends AppCompatActivity {
 
         //Agregar usando push()
             FarmacosActivity.refCarritos.push().setValue(carrito);
-
+        Toast.makeText(AddFarmacoActivity.this,
+                "Producto Agregado al carrito!",Toast.LENGTH_SHORT).show();
 
         finish();
     }
