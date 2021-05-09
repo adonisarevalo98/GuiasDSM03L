@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "847729238239",
+    "firebase_url": "https://medicassistant-nmokty.firebaseio.com",
+    "project_id": "medicassistant-nmokty",
+    "storage_bucket": "medicassistant-nmokty.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847729238239:android:924859f20a5fdea06cc96a",
+        "android_client_info": {
+          "package_name": "com.hector.guia8"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847729238239-p4snjp92gdcjd0b61e6i0roia0coslln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvPUcJ0eWjkQcjYwcA08Zj9R4emN-_KWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847729238239-0ffou5fko8qri8ubu9ger08ha0i0j43n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
